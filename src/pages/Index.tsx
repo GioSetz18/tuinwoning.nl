@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -9,15 +8,12 @@ import FAQ from '@/components/FAQ';
 import CTASection from '@/components/CTASection';
 import BrochureForm from '@/components/BrochureForm';
 import Footer from '@/components/Footer';
-
 const Index = () => {
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <main className="min-h-screen">
+  return <main className="min-h-screen">
       <Navbar />
       <Hero />
       <Benefits />
@@ -35,11 +31,7 @@ const Index = () => {
                 In onze brochure vindt u uitgebreide informatie over de verschillende modellen, specificaties, mogelijkheden en prijsindicaties.
               </p>
               <div className="aspect-video bg-sage/20 rounded-xl mb-4 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1485833077593-4278bba3f11f?w=800"
-                  alt="Tuinwoning brochure"
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Tuinwoning brochure" src="/lovable-uploads/c99f486b-83e0-462a-b9b4-22536804f75c.png" className="w-full h-full object-cover" />
               </div>
             </div>
             <div>
@@ -53,8 +45,6 @@ const Index = () => {
       <FAQ />
       <CTASection />
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
