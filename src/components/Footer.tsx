@@ -52,7 +52,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin className="w-5 h-5 text-sage mt-1" />
-                <span className="text-white/80">Voorbeeldstraat 123, 1234 AB Amsterdam</span>
+                <span className="text-white/80">Pienemanstraat 114
+6717 WG, Ede (Gelderland)</span>
               </li>
             </ul>
           </div>
