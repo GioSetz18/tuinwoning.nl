@@ -14,14 +14,10 @@ const Footer = () => {
             <div className="flex space-x-4">
               {/* Social media icons placeholder */}
               <a href="#" className="text-white/80 hover:text-white" aria-label="Facebook">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                  <span className="sr-only">Facebook</span>
-                </div>
+                
               </a>
               <a href="#" className="text-white/80 hover:text-white" aria-label="LinkedIn">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                  <span className="sr-only">LinkedIn</span>
-                </div>
+                
               </a>
             </div>
           </div>
