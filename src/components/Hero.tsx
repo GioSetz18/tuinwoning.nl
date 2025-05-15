@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
 const Hero = () => {
-  return (
-    <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24 bg-beige">
+  return <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24 bg-beige">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
@@ -26,25 +23,19 @@ const Hero = () => {
             <div className="mt-8">
               <p className="text-sm font-medium text-brown mb-2">Vertrouwd door 100+ families in Nederland</p>
               <div className="flex items-center justify-center md:justify-start space-x-4">
-                <div className="w-16 h-8 bg-white/50 rounded-md"></div>
-                <div className="w-16 h-8 bg-white/50 rounded-md"></div>
-                <div className="w-16 h-8 bg-white/50 rounded-md"></div>
+                
+                
+                
               </div>
             </div>
           </div>
           <div className="relative hidden md:block">
             <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800"
-                alt="Senior met volwassen kind"
-                className="w-full h-auto object-cover aspect-[4/3]"
-              />
+              <img alt="Senior met volwassen kind" className="w-full h-auto object-cover aspect-[4/3]" src="/lovable-uploads/e38887b6-d6cd-4a42-bfba-44529a1814cc.jpg" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
