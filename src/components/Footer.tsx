@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-charcoal text-white">
+  return <footer className="bg-charcoal text-white">
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1: About */}
@@ -47,7 +44,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-start space-x-2">
                 <Phone className="w-5 h-5 text-sage mt-1" />
-                <span className="text-white/80">+31 (0) 123 456 789</span>
+                <span className="text-white/80">+31 (0) 318-78 65 54</span>
               </li>
               <li className="flex items-start space-x-2">
                 <Mail className="w-5 h-5 text-sage mt-1" />
@@ -67,15 +64,8 @@ const Footer = () => {
               Meld u aan voor onze nieuwsbrief en blijf op de hoogte.
             </p>
             <form className="flex flex-col space-y-2">
-              <input 
-                type="email" 
-                placeholder="E-mailadres" 
-                className="px-4 py-2 rounded-lg bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-sage"
-              />
-              <button 
-                type="submit"
-                className="bg-sage text-white px-4 py-2 rounded-lg hover:bg-sage/90"
-              >
+              <input type="email" placeholder="E-mailadres" className="px-4 py-2 rounded-lg bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-sage" />
+              <button type="submit" className="bg-sage text-white px-4 py-2 rounded-lg hover:bg-sage/90">
                 Aanmelden
               </button>
             </form>
@@ -91,8 +81,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
