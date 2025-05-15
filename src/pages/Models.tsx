@@ -94,7 +94,7 @@ const Models = () => {
                   
                   <div className="flex flex-wrap gap-4 mb-6">
                     <span className="bg-beige px-3 py-1 rounded-lg text-xs font-medium text-charcoal">
-                      {model.bedrooms} {model.bedrooms === 'Naar wens' ? '' : 'slaapkamer' + (model.bedrooms > 1 ? 's' : '')}
+                      {model.bedrooms} {model.bedrooms === 'Naar wens' ? '' : 'slaapkamer' + (typeof model.bedrooms === 'number' && model.bedrooms > 1 ? 's' : '')}
                     </span>
                     <span className="bg-beige px-3 py-1 rounded-lg text-xs font-medium text-charcoal">
                       Volledig toegankelijk
@@ -104,7 +104,7 @@ const Models = () => {
                     </span>
                   </div>
                   
-                  <Button asChild className="w-full bg-sage hover:bg-sage/90">
+                  <Button asChild className="w-full bg-sage hover:bg-opacity-90">
                     <Link to={`/modellen/${model.id}`}>
                       <span>Bekijk details</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -127,7 +127,7 @@ const Models = () => {
                   We houden rekening met uw specifieke wensen, de beschikbare ruimte en eventuele 
                   toegankelijkheidseisen.
                 </p>
-                <Button asChild className="bg-sage hover:bg-sage/90">
+                <Button asChild className="bg-sage hover:bg-opacity-90">
                   <Link to="/contact">Vraag een persoonlijk adviesgesprek aan</Link>
                 </Button>
               </div>
