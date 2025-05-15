@@ -21,7 +21,7 @@ const benefits = [
   },
   {
     icon: <FileCheck className="w-10 h-10 text-sage" />,
-    title: "Wettelijk toegestaan",
+    title: "Vrijblijvend thuisbezoek",
     description: "Past binnen de wettelijke regels voor mantelzorgwoningen in Nederland."
   }
 ];
