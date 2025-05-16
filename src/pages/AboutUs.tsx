@@ -1,19 +1,15 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTASection from '@/components/CTASection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-
 const AboutUs = () => {
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <main className="min-h-screen">
+  return <main className="min-h-screen">
       <Navbar />
       
       {/* Hero Section */}
@@ -50,11 +46,7 @@ const AboutUs = () => {
               </Button>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="https://images.unsplash.com/photo-1593100126453-19b562a800c1?w=800" 
-                alt="Het team van Tuinwoning.nl" 
-                className="w-full h-auto"
-              />
+              <img src="https://images.unsplash.com/photo-1593100126453-19b562a800c1?w=800" alt="Het team van Tuinwoning.nl" className="w-full h-auto" />
             </div>
           </div>
           
@@ -63,18 +55,14 @@ const AboutUs = () => {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/4">
                 <div className="w-40 h-40 rounded-full overflow-hidden mx-auto">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" 
-                    alt="Oprichter Tuinwoning.nl" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Oprichter Tuinwoning.nl" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="md:w-3/4">
                 <blockquote className="text-xl md:text-2xl font-medium text-charcoal mb-4 italic">
                   "We begonnen Tuinwoning.nl vanuit een persoonlijke ervaring. Mijn ouders wilden graag dichterbij wonen, maar zonder in te leveren op hun zelfstandigheid. Dat werd de basis voor ons concept: kwaliteitsvolle, duurzame en toegankelijke mantelzorgwoningen die families samenbrengen."
                 </blockquote>
-                <p className="text-brown font-bold">Jan de Vries, Oprichter Tuinwoning.nl</p>
+                <p className="text-brown font-bold">Ad van Meeteren, Oprichter Tuinwoning.nl</p>
               </div>
             </div>
           </div>
@@ -119,8 +107,6 @@ const AboutUs = () => {
       
       <CTASection />
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default AboutUs;
