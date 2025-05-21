@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -8,12 +9,18 @@ import FAQ from '@/components/FAQ';
 import CTASection from '@/components/CTASection';
 import BrochureForm from '@/components/BrochureForm';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
+
 const Index = () => {
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const brochureUrl = 'https://www.tuinwoning.nl/app/uploads/2024/02/2024-TUINWONING_Brochure.pdf';
+  
   return <main className="min-h-screen">
+      <SEO />
       <Navbar />
       <Hero />
       <Benefits />
@@ -35,7 +42,7 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <BrochureForm />
+              <BrochureForm pdfUrl={brochureUrl} />
             </div>
           </div>
         </div>

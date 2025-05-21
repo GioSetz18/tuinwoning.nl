@@ -3,6 +3,11 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BrochureForm from '@/components/BrochureForm';
+import SEO from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Download, FilePdf } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const Brochure = () => {
   // Scroll to top on component mount
@@ -10,8 +15,15 @@ const Brochure = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const brochureUrl = 'https://www.tuinwoning.nl/app/uploads/2024/02/2024-TUINWONING_Brochure.pdf';
+
   return (
     <main className="min-h-screen">
+      <SEO 
+        title="Tuinwoning.nl Brochure - Vraag onze brochure aan" 
+        description="Download onze uitgebreide brochure met alle details over onze tuinwoningen, plattegronden en prijsinformatie."
+        canonicalUrl="https://tuinwoning.nl/brochure"
+      />
       <Navbar />
       
       {/* Hero Section */}
@@ -31,7 +43,7 @@ const Brochure = () => {
       {/* Brochure Content */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl font-bold text-charcoal mb-6">
                 Wat kunt u verwachten in onze brochure?
@@ -69,10 +81,34 @@ const Brochure = () => {
                 </p>
                 <p className="text-brown font-bold mt-2">- Familie de Vries</p>
               </div>
+
+              {/* Official Brochure Card */}
+              <Card className="mt-8 overflow-hidden border-sage/20">
+                <CardContent className="p-6">
+                  <div className="flex flex-col sm:flex-row items-center gap-6">
+                    <div className="relative flex-shrink-0 w-full sm:w-32 h-44 bg-beige/50 rounded overflow-hidden">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <FilePdf className="h-16 w-16 text-sage" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-charcoal mb-2">Officiële Tuinwoning Brochure</h3>
+                      <p className="text-brown mb-4">Download direct onze meest recente brochure met alle informatie over tuinwoningen.</p>
+                      <Button 
+                        onClick={() => window.open(brochureUrl, '_blank')}
+                        className="w-full sm:w-auto bg-sage hover:bg-sage/90"
+                      >
+                        <Download className="mr-2 h-4 w-4" />
+                        Download PDF
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
             
-            <div>
-              <BrochureForm />
+            <div className="sticky top-24">
+              <BrochureForm pdfUrl={brochureUrl} />
             </div>
           </div>
           

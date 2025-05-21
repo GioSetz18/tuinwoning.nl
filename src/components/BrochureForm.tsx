@@ -38,7 +38,11 @@ const formSchema = z.object({
   }),
 });
 
-const BrochureForm = () => {
+interface BrochureFormProps {
+  pdfUrl?: string;
+}
+
+const BrochureForm = ({ pdfUrl = "https://www.tuinwoning.nl/app/uploads/2024/02/2024-TUINWONING_Brochure.pdf" }: BrochureFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<z.infer<typeof formSchema>>({
@@ -63,10 +67,15 @@ const BrochureForm = () => {
       // Simulate API call with a delay
       await new Promise(resolve => setTimeout(resolve, 1500));
       
+      // Open PDF in new tab (in production, this would be handled by the backend)
+      if (pdfUrl) {
+        window.open(pdfUrl, '_blank');
+      }
+      
       // Success notification
       toast({
         title: "Brochure aangevraagd!",
-        description: "De brochure is verstuurd naar uw e-mailadres.",
+        description: "De brochure is verstuurd naar uw e-mailadres en wordt nu geopend.",
       });
       
       // Reset form after successful submission
