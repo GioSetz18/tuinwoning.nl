@@ -6,7 +6,7 @@ import BrochureForm from '@/components/BrochureForm';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, FilePdf } from 'lucide-react';
+import { Download, FileText } from 'lucide-react'; // Changed FilePdf to FileText
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 const Brochure = () => {
@@ -88,7 +88,7 @@ const Brochure = () => {
                   <div className="flex flex-col sm:flex-row items-center gap-6">
                     <div className="relative flex-shrink-0 w-full sm:w-32 h-44 bg-beige/50 rounded overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <FilePdf className="h-16 w-16 text-sage" />
+                        <FileText className="h-16 w-16 text-sage" /> {/* Changed from FilePdf to FileText */}
                       </div>
                     </div>
                     <div className="flex-1">
